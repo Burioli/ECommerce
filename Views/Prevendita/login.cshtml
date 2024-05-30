@@ -1,0 +1,63 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">UTOPIA</h1>
+    <p>registrati per vedere ogni nostro evento</p>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accedi</title>
+  <style>
+    /* Stili per rendere i bottoni più visibili */
+    .button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 10px;
+      border-radius: 5px;
+      border: none;
+    }
+    .accedi {
+      background-color: #4CAF50; /* Verde */
+      color: white;
+    }
+    /* Stili per i campi del form */
+    .form-fields {
+      display: none;
+      margin-top: 10px;
+    }
+    .form-fields.visible {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+<button class="button accedi" onclick="showLoginForm()">Accedi</button>
+
+<div id="loginForm" class="form-fields">
+  <input type="email" placeholder="Email" required>
+  <br>
+  <input type="password" placeholder="Password" required>
+  <br>
+  <button class="button" onclick="login()">Accedi</button>
+</div>
+
+<script>
+  function showLoginForm() {
+    document.getElementById('loginForm').classList.add('visible');
+  }
+
+  function login() {
+    // Aggiungi qui la logica per gestire il login
+    alert("Hai effettuato il login!");
+  }
+</script>
+
+</body>
+</html>
+
+</div>

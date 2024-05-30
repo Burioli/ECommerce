@@ -1,0 +1,198 @@
+﻿@{
+    ViewData["Title"] = "catalogo";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>sfoglia il catalogo e scegli gli eventi che ti piacciono</p>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acquisto</title>
+  <style>
+    .button {
+      cursor: pointer;
+      border: none;
+      background: none;
+      padding: 0;
+      width: 200px; /* Imposta la larghezza desiderata */
+      height: auto; /* Mantieni l'aspetto proporzionato */
+    }
+    .form-fields {
+      display: none;
+    }
+    .form-fields.visible { 
+      display: block;
+    }
+    .image-container {
+      display: inline-block;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+
+<!-- Immagini che fungono da bottoni -->
+<div class="image-container">
+  <img src="/cocorico.jpg" alt="Cocorico" class="button" onclick="showForm('cocorico')">
+  <h2>Cocorico</h2>
+  <div id="personalInfoForm_cocorico" class="form-fields">
+    <form onsubmit="return false;">
+      <input id="firstName_cocorico" type="text" placeholder="Nome" required><br>
+      <input id="lastName_cocorico" type="text" placeholder="Cognome" required><br>
+      <label><input type="radio" name="gender_cocorico" value="maschio" required> Maschio</label>
+      <label><input type="radio" name="gender_cocorico" value="femmina" required> Femmina</label><br>
+      <button onclick="confirmPurchase()">Continua</button>
+    </form>
+  </div>
+</div>
+
+<div class="image-container">
+  <img src="/prom.jpg" alt="Prom" class="button" onclick="showForm('prom')">
+  <h2>Prom</h2>
+  <div id="personalInfoForm_prom" class="form-fields">
+    <form onsubmit="return false;">
+      <input id="firstName_prom" type="text" placeholder="Nome" required><br>
+      <input id="lastName_prom" type="text" placeholder="Cognome" required><br>
+      <label><input type="radio" name="gender_prom" value="maschio" required> Maschio</label>
+      <label><input type="radio" name="gender_prom" value="femmina" required> Femmina</label><br>
+      <button onclick="confirmPurchase()">Continua</button>
+    </form>
+  </div>
+</div>
+
+<div class="image-container">
+  <img src="/dagostino.jpg" alt="Gigi Dagostino" class="button" onclick="showForm('dagostino')">
+  <h2>Gigi Dagostino</h2>
+  <div id="personalInfoForm_dagostino" class="form-fields">
+    <form onsubmit="return false;">
+      <input id="firstName_dagostino" type="text" placeholder="Nome" required><br>
+      <input id="lastName_dagostino" type="text" placeholder="Cognome" required><br>
+      <label><input type="radio" name="gender_dagostino" value="maschio" required> Maschio</label>
+      <label><input type="radio" name="gender_dagostino" value="femmina" required> Femmina</label><br>
+      <button onclick="confirmPurchase()">Continua</button>
+    </form>
+  </div>
+</div>
+
+<!-- Aggiungi le altre immagini -->
+<div class="image-container">
+  <img src="/donperro.jpg" alt="Don Perro" class="button" onclick="showForm('donperro')">
+  <h2>Don Perro</h2>
+  <div id="personalInfoForm_donperro" class="form-fields">
+    <form onsubmit="return false;">
+      <input id="firstName_donperro" type="text" placeholder="Nome" required><br>
+      <input id="lastName_donperro" type="text" placeholder="Cognome" required><br>
+      <label><input type="radio" name="gender_donperro" value="maschio" required> Maschio</label>
+      <label><input type="radio" name="gender_donperro" value="femmina" required> Femmina</label><br>
+      <button onclick="confirmPurchase()">Continua</button>
+    </form>
+  </div>
+</div>
+
+<div class="image-container">
+  <img src="/girl.jpg" alt="Girl Event" class="button" onclick="showForm('girl')">
+  <h2>Girl Event</h2>
+  <div id="personalInfoForm_girl" class="form-fields">
+    <form onsubmit="return false;">
+      <input id="firstName_girl" type="text" placeholder="Nome" required><br>
+      <input id="lastName_girl" type="text" placeholder="Cognome" required><br>
+      <label><input type="radio" name="gender_girl" value="maschio" required> Maschio</label>
+      <label><input type="radio" name="gender_girl" value="femmina" required> Femmina</label><br>
+      <button onclick="confirmPurchase()">Continua</button>
+    </form>
+  </div>
+</div>
+
+<div class="image-container">
+  <img src="/beky.jpg" alt="Beky" class="button" onclick="showForm('beky')">
+  <h2>Beky</h2>
+  <div id="personalInfoForm_beky" class="form-fields">
+    <form onsubmit="return false;">
+      <input id="firstName_beky" type="text" placeholder="Nome" required><br>
+      <input id="lastName_beky" type="text" placeholder="Cognome" required><br>
+      <label><input type="radio" name="gender_beky" value="maschio" required> Maschio</label>
+      <label><input type="radio" name="gender_beky" value="femmina" required> Femmina</label><br>
+      <button onclick="confirmPurchase()">Continua</button>
+    </form>
+  </div>
+</div>
+
+<div class="image-container">
+  <img src="/beach party.jpg" alt="Beach Party" class="button" onclick="showForm('beachparty')">
+  <h2>Beach Party</h2>
+  <div id="personalInfoForm_beachparty" class="form-fields">
+    <form onsubmit="return false;">
+      <input id="firstName_beachparty" type="text" placeholder="Nome" required><br>
+      <input id="lastName_beachparty" type="text" placeholder="Cognome" required><br>
+      <label><input type="radio" name="gender_beachparty" value="maschio" required> Maschio</label>
+      <label><input type="radio" name="gender_beachparty" value="femmina" required> Femmina</label><br>
+      <button onclick="confirmPurchase()">Continua</button>
+    </form>
+  </div>
+</div>
+
+<div class="image-container">
+  <img src="/salad.jpg" alt="Salad Event" class="button" onclick="showForm('salad')">
+  <h2>Salad Event</h2>
+  <div id="personalInfoForm_salad" class="form-fields">
+    <form onsubmit="return false;">
+      <input id="firstName_salad" type="text" placeholder="Nome" required><br>
+      <input id="lastName_salad" type="text" placeholder="Cognome" required><br>
+      <label><input type="radio" name="gender_salad" value="maschio" required> Maschio</label>
+      <label><input type="radio" name="gender_salad" value="femmina" required> Femmina</label><br>
+      <button onclick="confirmPurchase()">Continua</button>
+    </form>
+  </div>
+</div>
+
+<!-- Form per i dati della carta di credito -->
+<div id="paymentForm" class="form-fields">
+  <form onsubmit="return false;">
+    <p>Il prezzo è di 25 euro.</p>
+    <input type="text" placeholder="Numero carta di credito" required><br>
+    <input type="text" placeholder="Nome sulle carta" required><br>
+    <button onclick="pay()">Paga</button>
+  </form>
+</div>
+
+<!-- Messaggio di pagamento effettuato -->
+<div id="paymentConfirmation" style="display: none;">
+  <p>Pagamento effettuato</p>
+</div>
+
+<script>
+  function showForm(imageName) {
+    var formId = 'personalInfoForm_' + imageName;
+    var form = document.getElementById(formId);
+
+    // Nascondi tutti i form prima di mostrare quello corretto
+    var formContainers = document.querySelectorAll('.form-fields');
+    formContainers.forEach(function(container) {
+      container.classList.remove('visible');
+    });
+
+    // Mostra il form corretto
+    form.classList.add('visible');
+    document.getElementById('paymentForm').classList.remove('visible');
+    document.getElementById('paymentConfirmation').style.display = 'none';
+  }
+
+  function confirmPurchase() {
+    document.querySelectorAll('.form-fields.visible').forEach(function(container) {
+      container.classList.remove('visible');
+    });
+    document.getElementById('paymentForm').classList.add('visible');
+    document.getElementById('paymentConfirmation').style.display = 'none';
+  }
+
+  function pay() {
+    // Simula un pagamento (puoi aggiungere qui la tua logica per il pagamento)
+    // In questo esempio, mostriamo solo un messaggio di conferma
+    document.getElementById('paymentConfirmation').style.display = 'block';
+  }
+</script>
+
+</body>
+</html>

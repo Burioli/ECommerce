@@ -1,0 +1,23 @@
+﻿@model Utente
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">UTOPIA</h1>
+    <p>registrati per vedere ogni nostro evento</p>
+</div>
+
+<form asp-action="login" method="post">
+  <div>
+    <label >Username</label>
+    <input asp-for="UserName">
+  </div>
+  <div>
+    <label>Password</label>
+    <input asp-for="UserPassword">
+  </div>
+
+  <input type="submit" value="Login" class="btn btn-primary"/>
+</form>

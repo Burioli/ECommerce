@@ -1,0 +1,67 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">UTOPIA</h1>
+    <p>Accedi o registrati per vedere ogni nostro evento</p>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registrati</title>
+  <style>
+    /* Stili per rendere i bottoni più visibili */
+    .button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 10px;
+      border-radius: 5px;
+      border: none;
+    }
+    .registrati {
+      background-color: #f44336; /* Rosso */
+      color: white;
+    }
+    /* Stili per i campi del form */
+    .form-fields {
+      display: none;
+      margin-top: 10px;
+    }
+    .form-fields.visible {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+<button class="button registrati" onclick="showRegisterForm()">Registrati</button>
+
+<div id="registerForm" class="form-fields">
+  <input type="text" placeholder="Nome" required>
+  <br>
+  <input type="text" placeholder="Cognome" required>
+  <br>
+  <input type="text" placeholder="Indirizzo" required>
+  <br>
+  <input type="password" placeholder="Password" required>
+  <br>
+  <button class="button" onclick="register()">Invia</button>
+</div>
+
+<script>
+  function showRegisterForm() {
+    document.getElementById('registerForm').classList.add('visible');
+  }
+
+  function register() {
+    // Aggiungi qui la logica per gestire la registrazione
+    alert("Hai completato la registrazione!");
+  }
+</script>
+
+</body>
+</html>
+
+</div>
